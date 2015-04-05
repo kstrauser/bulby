@@ -9,7 +9,7 @@ import json
 
 class HueBridgeClient(object):
     def __init__(self, ip_address=None, port=80, scheme='http',
-                 device_type='bulby', username='bulbyapp'):
+                 device_type='bulby', username='bulbyappdev'):
         '''
         Connects to a Hue Bridge, if an ip address isn't defined it
         will use ssdp to discover the bridge on the network. If there

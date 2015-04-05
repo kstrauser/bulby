@@ -21,7 +21,14 @@ and now your light should be green! You can also reference lights by name:
     client = HueBridgeClient()
     client.set_color('Office 1', '00ff00')
 
+The first time you connect to a bridge, the username you specify (default ``bulbyappdev``) will be created on that bridge.
 
+.. code-block:: python
+
+    from bulby.client import HueBridgeClient
+    client = HueBridgeClient(username='sometestusername')
+
+Note: The Hue API requires the username to be at least 10 characters long. Attempting to create a shorter username will result in an error like: ``Exception: invalid value,  tooshort, for parameter, username``.
 
 Development
 ================
